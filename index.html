@@ -3,56 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>माझ्या मामाला वाढदिवसाच्या शुभेच्छा</title>
+    <title>आमच्या मामाश्रींना वाढदिवसाच्या शुभेच्छा</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            overflow: hidden; /* Prevents scrollbars during the animation */
         }
-
-        header {
-            background-color: rgba(0, 0, 0, 0.7);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 15px 20px;
-            display: block;
-        }
-
-        nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .background {
+        
+        img{border-radius: 20px;
           
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
+        
+        }
+      
+       
+        .background {
             align-items: center;
-            color: white;
+            background-position: center;
             text-align: center;
+            display: block;
+            background-size: 340px 760px;
+
+        background-color: white;
+            justify-content: center;
+           
+           
+            
         }
 
         .content {
@@ -61,48 +38,87 @@
             border-radius: 10px;
         }
 
-        footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            left: 0;
+      
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            background-color: red;
+            top: -50px;
+            animation: confetti-fall 3s infinite ease-in-out;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">मुख्य पृष्ठ</a></li>
-                <li><a href="#about">विषयी</a></li>
-                <li><a href="#gallery">गॅलरी</a></li>
-                <li><a href="#contact">संपर्क</a></li>
-            </ul>
-        </nav>
-    </header>
+   
 
     <section id="home" class="background">
-        <div class="content">
-          <img src="images/vichar majhe1.png" width="100px" height="100px" alt="hi" class="inline"/>
-            <h1>माझ्या मामाला वाढदिवसाच्या शुभेच्छा</h1>
-            <p>आपल्या जीवनात आनंद, समृद्धी, आणि आरोग्य लाभो!</p>
+       
+
+
+        <div class="content">    
+           
+            <img src="images/mama.jpeg" width="200px" height="200px" >
+           
+            <h1> 👑किंगमेकर👑 </h1>  
+            <h5>✨आमचे मामाश्री बाळासाहेब पंढरीनाथ नायकोडी म्हणजे घरातील आदर्श व्यक्तिमत्व... <br>
+     लहान भावंडांनी ,लहान बहिणींनी ,लहान मुलांबाळांनी आणि घरातल्या मोठ्यांनीही ,<br>
+     वागण्या बोलण्याचा, कृतीचा ,आदर्श घ्यावा असे ज्ञानी व्यक्तिमत्व... <br>
+     ज्ञान ..त्याग.. करूणा ..प्रेम ..भक्ती ..उत्कृष्ट भाषणशैली ..  <br>
+     अशा अनेक गुणांनी युक्त असलेले .. <br>
+     सुप्रसिद्ध गाडामालक आणि आभाळाएवढं मोठं मन करून सर्वांना अजूनही सांभाळणाऱ्या .. <br>
+     आम्हाला नाही वाटत कि आपल्याएवढा जीव कधी कुठल्या मामाने आपल्या भाच्यांना लावला असेल... <br>    
+     जेव्हाही आम्ही तुम्हाला पाहिले आहे.. 
+     तेव्हा आम्हाला तुमच्यासारखं बनण्याची इच्छा निर्माण झाली आहे <br>
+     तुम्ही आमच्यासाठी एक आदर्श आहात ..<br>
+     तुमचे उपकार आम्ही कधीच विसरू शकत नाही  .. <br>
+    
+     अशा या आमच्या मामाश्रींना .. <br>
+     त्यांच्या पायी मस्तक ठेऊन ..🙇
+     जन्मदिनाच्या नम्र शुभेच्छा 👏🏻👏🏻!! <br>
+               </h5>
         </div>
+       
+        <div id="confetti-container">
+        </div>
+       
+
+ 
     </section>
 
-    <footer>
-        <p>© 2024 माझ्या मामाला वाढदिवसाच्या शुभेच्छा. सर्व हक्क राखीव.</p>
-    </footer>
+    
 
     <script>
-        // Add any interactive JS here if needed
-        console.log("Website loaded successfully!");
+        document.addEventListener("DOMContentLoaded", () => {
+            const confettiContainer = document.getElementById('confetti-container');
+            const confettiCount = 100; // Number of confetti pieces
+
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.backgroundColor = getRandomColor();
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.animationDelay = `${Math.random() * 3}s`;
+                confettiContainer.appendChild(confetti);
+            }
+
+            function getRandomColor() {
+                const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple', 'pink'];
+                return colors[Math.floor(Math.random() * colors.length)];
+            }
+        });
     </script>
 </body>
 </html>
-
-
-  
